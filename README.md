@@ -1,3 +1,5 @@
+# Big modernization in progress :)
+
 # Dynamic Ocean 🐡
 
 Dynamic Ocean is a simple game that implements the idea of utilizing the camera hole as an element of gameplay.
