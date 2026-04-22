@@ -19,11 +19,9 @@ import com.shpak.dynamicocean.model.DeviceScreen
 import com.shpak.dynamicocean.model.DisplayCutout
 import com.shpak.dynamicocean.model.toDisplayCutout
 import com.shpak.dynamicocean.repository.DeviceScreenDataRepository
-import com.shpak.dynamicocean.repository.OceanGameSettingsRepository
 import com.shpak.dynamicocean.repository.OceanGameStatRepository
 import com.shpak.dynamicocean.repository.ScreenDataRepository
 import com.shpak.dynamicocean.service.DynamicOceanService
-import com.shpak.dynamicocean.view.SettingsDialog
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -97,12 +95,6 @@ class MainActivity : AppCompatActivity() {
                 updateActivationButton(false)
                 updateWarningView(false)
             }
-        }
-
-        settingsButton.setOnClickListener {
-            SettingsDialog(
-                this, OceanGameSettingsRepository(this)
-            ).show()
         }
     }
 

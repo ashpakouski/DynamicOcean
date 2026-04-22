@@ -1,7 +1,6 @@
 package com.shpak.dynamicocean.controller
 
 import com.shpak.dynamicocean.model.*
-import com.shpak.dynamicocean.repository.GameSettingsRepository
 import com.shpak.dynamicocean.repository.GameStatRepository
 import com.shpak.dynamicocean.repository.ScreenDataRepository
 import kotlin.math.abs
@@ -11,8 +10,7 @@ import kotlin.math.roundToInt
 class DynamicOceanController(
     private val gameListener: GameListener,
     screenDataRepository: ScreenDataRepository,
-    private val gameStatRepository: GameStatRepository,
-    private val gameSettingsRepository: GameSettingsRepository
+    private val gameStatRepository: GameStatRepository
 ) : GameController {
     // Game objects
     private var gameObject: GameObject
@@ -99,8 +97,6 @@ class DynamicOceanController(
             gameListener.putGameObject(gameObject)
             gameStartMillis = System.currentTimeMillis()
         }
-
-        holeGapSize = gameSettingsRepository.difficulty
     }
 
     override fun finishGame() {
